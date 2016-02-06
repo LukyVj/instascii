@@ -1,7 +1,7 @@
 var instASCII = function(param){
   // Since it's instagram/facebook servers, we need to pass through a cors helper
-  // By default, I use cors.io ( big up to @dervondenbergen 🙌 )but you're free to 
-  // use the one you prefer.
+  // By default, I use cors.io ( big up to @dervondenbergen for letting me know about it 🙌 )
+  // but you're free to use the one you prefer.
   var cors = param.cors || 'http://cors.io?u='; 
 
   // Now we create a new instafeed instance, using the parameters passed to 
