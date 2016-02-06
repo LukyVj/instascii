@@ -20,7 +20,15 @@ An instafeed.js plugin that returns ASCII versions of images
     type: <span>'colored'</span>, // or Basic | By default : colored
     color: <span>'#fff'</span>,    // Only if basic
     wrapper: <span>'pre',</span> // By default : pre
-    wrapperClass: <span>'instascii'</span>// By default : instascii
+    wrapperClass: <span>'instascii'</span>, // By default : instascii
+
+    // Because instagram servers
+    // are protected, we need a server
+    // that deals with CORS restriction
+    // By default I created an heroku app
+    // for it :
+    // https://still-forest-36763.herokuapp.com/?u=
+    cors: 'https://still-forest-36763.herokuapp.com/?u='
   })</code></pre>
   <p>All the parameters but <code class=" language-javascript">type</code> and <code class=" language-javascript">color</code>, are the same as the one used on <a href="http://instafeedjs.com/">Instafeed.js</a>, so if you encounter any issues related to those parameters (except <code class=" language-javascript">type</code> and <code class=" language-javascript">color</code>) , consider digging the <a href="http://instafeedjs.com/">Instafeed.js</a> documentation</p>
 
