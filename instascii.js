@@ -1,5 +1,5 @@
 var instASCII = function(param){
-  // Since it's instagram/facebook servers, we need to pass through a cors helper
+	// Since it's instagram/facebook servers, we need to pass through a cors helper
   // By default, I use cors.io ( big up to @dervondenbergen for letting me know about it 🙌 )
   // but you're free to use the one you prefer.
   var cors = param.cors || 'http://cors.io?u='; 
@@ -49,15 +49,15 @@ var instASCII = function(param){
               switch(param.type){
                 case 'colored':
                   // If it's colored, we add the default wrapper
-                  var pr = document.createElement(param.wrapper);
+                  var pr = document.createElement(param.wrapper ? param.wrapper : 'pre' );
                   pr.innerHTML = aEvt.currentTarget.responseText;
-                  pr.classList.add(param.wrapperClass)
+                  pr.classList.add(param.wrapperClass ? param.wrapperClass : 'ascii', param.type ? param.type : 'colored')
                   break;
                 case 'basic':
                   // If it's basic, so just text, we add a color to it, defined in 'param.color'
-                  var pr = document.createElement(param.wrapper);
+                  var pr = document.createElement(param.wrapper ? param.wrapper : 'pre' );
                   pr.innerHTML = aEvt.currentTarget.responseText;
-                  pr.classList.add(param.wrapperClass)
+                  pr.classList.add(param.wrapperClass ? param.wrapperClass : 'ascii', param.type ? param.type : 'colored')
                   pr.style.color=param.color // right here
                   break;
               }
