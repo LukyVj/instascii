@@ -1,8 +1,8 @@
 var instASCII = function(param){
-	// Since it's instagram/facebook servers, we need to pass through a cors helper
-  // By default, I use cors.io ( big up to @dervondenbergen for letting me know about it 🙌 )
+  // Since it's instagram/facebook servers, we need to pass through a cors helper
+  // By default, I use the server I created on heroku
   // but you're free to use the one you prefer.
-  var cors = param.cors || 'http://cors.io?u='; 
+  var cors = param.cors || 'https://still-forest-36763.herokuapp.com/?u='; 
 
   // Now we create a new instafeed instance, using the parameters passed to 
   // instASCII
