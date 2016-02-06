@@ -21,7 +21,6 @@ An instafeed.js plugin that returns ASCII versions of images
     color: <span>'#fff'</span>,    // Only if basic
     wrapper: <span>'pre',</span> // By default : pre
     wrapperClass: <span>'instascii'</span>, // By default : instascii
-
     // Because instagram servers
     // are protected, we need a server
     // that deals with CORS restriction
